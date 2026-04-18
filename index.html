@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nathalie & Hector - Nuestra Boda</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Pinyon+Script&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="rings-icon">
+                <svg viewBox="0 0 100 100" class="gold-svg">
+                    <circle cx="35" cy="50" r="25" stroke-width="4" fill="none"/>
+                    <circle cx="65" cy="50" r="25" stroke-width="4" fill="none"/>
+                </svg>
+            </div>
+            <p class="pre-title">Nuestra Boda</p>
+            <h1 class="names" id="ui-nombres"></h1>
+            <p class="save-the-date" id="ui-fecha"></p>
+            
+            <div id="countdown" class="countdown">
+                </div>
+            <a href="#rsvp" class="btn-gold scroll-link">Confirmar Asistencia</a>
+        </div>
+    </header>
+
+    <section id="detalles" class="locations reveal.active">
+        <div class="monstrance-bg"></div> <div class="container">
+            <h2>Los Detalles</h2>
+            <div class="cards-container">
+                <div class="card reveal-up">
+                    <div class="card-icon">⛪</div>
+                    <h3>Ceremonia Eclesiástica</h3>
+                    <p class="time" id="ui-ceremonia-hora"></p>
+                    <p class="place" id="ui-ceremonia-lugar"></p>
+                    <p class="address" id="ui-ceremonia-dir"></p>
+                    <a href="#" target="_blank" class="btn-outline" id="ui-ceremonia-mapa">Ver Mapa</a>
+                </div>
+                <div class="card reveal-up" style="animation-delay: 0.2s;">
+                    <div class="card-icon">🥂</div>
+                    <h3>Recepción</h3>
+                    <p class="time" id="ui-recepcion-hora"></p>
+                    <p class="place" id="ui-recepcion-lugar"></p>
+                    <p class="address" id="ui-recepcion-dir"></p>
+                    <a href="#" target="_blank" class="btn-outline" id="ui-recepcion-mapa">Ver Mapa</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section id="rsvp" class="rsvp reveal.active">
+        <div class="container">
+            <h2>Confirmación</h2>
+            <div class="form-wrapper">
+                
+                <div id="codigo-section">
+                    <p>Ingresa el código secreto de tu invitación física para acceder a la confirmación.</p>
+                    <div class="input-group" style="max-width: 300px; margin: 0 auto;">
+                        <input type="text" id="codigo-acceso" placeholder="Ej: MARIA2026" required autocomplete="off">
+                    </div>
+                    <button id="btn-verificar" class="btn-gold" style="margin-top:15px;">Validar Código</button>
+                    <p id="error-codigo" class="hidden" style="color:#ffb3b3; margin-top:15px; font-weight:bold;">
+                        Código incorrecto. Por favor, verifica tu invitación.
+                    </p>
+                </div>
+
+                <form id="rsvp-form" class="hidden">
+                    <p style="margin-bottom: 25px; color: var(--gold-light);">¡Código aceptado! Sería un honor contar con tu presencia.</p>
+                    <div class="input-group">
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombre Completo" required minlength="3">
+                    </div>
+                    <div class="input-group">
+                        <input type="email" id="email" name="email" placeholder="Correo Electrónico" required>
+                    </div>
+                    <div class="input-group">
+                        <select id="asistencia" name="asistencia" required>
+                            <option value="" disabled selected>¿Asistirá?</option>
+                            <option value="Si">Sí, asistiré con gusto</option>
+                            <option value="No">Lamentablemente no podré</option>
+                        </select>
+                    </div>
+                    
+                    <input type="hidden" id="invitado_de" name="invitado_de" value="">
+
+                    <button type="submit" class="btn-gold-full">Enviar Respuesta</button>
+                </form>
+
+                <div id="form-message" class="hidden status-message">
+                    <p class="loader"></p>
+                    <span>Enviando confirmación...</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p class="pinyon">Te esperamos,</p>
+            <p class="names-footer">N & H</p>
+            <div class="visitor-counter">
+                <p>Visitas:</p>
+                <img src="https://hitwebcounter.com/counter/counter.php?page=SU_ID_UNICO&style=0006&nbdigits=5&type=page&initCount=0" title="Contador" Alt="Contador" border="0" />
+            </div>
+        </div>
+    </footer>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

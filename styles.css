@@ -1,0 +1,428 @@
+/* =========================================
+   Paleta de Colores y Variables
+   ========================================= */
+:root {
+    --navy: #101D33;      /* Navy más profundo */
+    --gold: #C5A059;      /* Dorado Champagne */
+    --gold-light: #E0C38C; /* Dorado más claro para hovers */
+    --beige: #FBF9F1;     /* Beige cremoso */
+    --beige-dark: #F1EAD7; /* Beige para fondos de sección */
+    --white: #FFFFFF;
+    --text-dark: #1A1A1A;
+}
+
+/* =========================================
+   Reset y Estilos Base
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Desplazamiento suave entre secciones */
+    font-family: 'Lato', sans-serif;
+    color: var(--text-dark);
+    background-color: var(--beige);
+    font-size: 16px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 2.5rem;
+    color: var(--navy);
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 2px;
+    background-color: var(--gold);
+}
+
+/* Clases para efectos de revelado al hacer scroll */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =========================================
+   Sección Hero (Bienvenida)
+   ========================================= */
+.hero {
+    height: 100vh;
+    background-color: var(--navy);
+    background-image: url('https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2070'); /* Imagen de fondo elegante */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: var(--beige);
+    text-align: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(16, 29, 51, 0.85); /* Overlay Navy sobre la imagen */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    padding: 20px;
+}
+
+.rings-icon {
+    width: 80px;
+    margin: 0 auto 20px;
+}
+
+.gold-svg {
+    stroke: var(--gold);
+}
+
+.pre-title {
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 0.9rem;
+    color: var(--gold-light);
+    margin-bottom: 10px;
+}
+
+.names {
+    font-family: 'Pinyon Script', cursive;
+    font-size: 5rem;
+    color: var(--gold);
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.save-the-date {
+    font-family: 'Cinzel', serif;
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+}
+
+/* =========================================
+   Contador de Tiempo Dinámico
+   ========================================= */
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.time-block {
+    background: rgba(251, 249, 241, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    min-width: 80px;
+    border: 1px solid rgba(197, 160, 89, 0.3);
+}
+
+.time-number {
+    font-family: 'Cinzel', serif;
+    font-size: 2rem;
+    color: var(--gold);
+    font-weight: bold;
+}
+
+.time-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: var(--beige);
+    letter-spacing: 1px;
+}
+
+/* =========================================
+   Sección Ubicaciones (Detalles)
+   ========================================= */
+.locations {
+    padding: 100px 0;
+    background-color: var(--beige-dark);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Imagen de fondo sutil del Santísimo Sacramento */
+.monstrance-bg {
+    position: absolute;
+    top: -10%; right: -5%;
+    width: 1400px;
+    height: 1400px;
+    background-image: url('https://img.freepik.com/premium-photo/blessed-sacrament-exposition-monstrance-with-catholic-priest-background-adoration-ceremony_933496-33984.jpg'); /* Imagen simbólica */
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.09; /* Casi invisible, muy sutil */
+    z-index: 1;
+}
+
+.locations .container {
+    position: relative;
+    z-index: 5;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 15px;
+    width: 350px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* Sombra suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #eee;
+    opacity: 0; /* Para animación individual */
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(16, 29, 51, 0.1);
+}
+
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    display: inline-block;
+    color: var(--gold);
+}
+
+.card h3 {
+    font-family: 'Cinzel', serif;
+    color: var(--navy);
+    margin-bottom: 15px;
+}
+
+.time {
+    font-family: 'Cinzel', serif;
+    color: var(--gold);
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.place {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.address {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+/* =========================================
+   Sección RSVP (Confirmación)
+   ========================================= */
+.rsvp {
+    padding: 100px 0;
+    background-color: var(--navy);
+    color: var(--beige);
+}
+
+.rsvp h2 {
+    color: var(--gold);
+}
+
+.rsvp h2::after {
+    background-color: var(--gold-light);
+}
+
+.form-wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.form-wrapper p {
+    margin-bottom: 40px;
+    color: var(--beige-dark);
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+input, select {
+    width: 100%;
+    padding: 15px;
+    background-color: rgba(251, 249, 241, 0.1);
+    border: 1px solid rgba(197, 160, 89, 0.3);
+    border-radius: 8px;
+    color: var(--beige);
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--gold);
+}
+
+select option {
+    background-color: var(--navy);
+    color: var(--beige);
+}
+
+/* =========================================
+   Botones y Estilos de Interacción
+   ========================================= */
+.btn-gold, .btn-gold-full, .btn-outline {
+    display: inline-block;
+    text-decoration: none;
+    font-family: 'Cinzel', serif;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-gold {
+    color: var(--navy);
+    background-color: var(--gold);
+    padding: 15px 30px;
+    border-radius: 30px;
+}
+
+.btn-gold:hover {
+    background-color: var(--gold-light);
+    transform: scale(1.05);
+}
+
+.btn-gold-full {
+    width: 100%;
+    color: var(--navy);
+    background-color: var(--gold);
+    padding: 15px;
+    border-radius: 8px;
+    border: none;
+}
+
+.btn-gold-full:hover {
+    background-color: var(--gold-light);
+}
+
+.btn-outline {
+    color: var(--gold);
+    border: 1px solid var(--gold);
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.btn-outline:hover {
+    background-color: var(--gold);
+    color: var(--white);
+}
+
+/* =========================================
+   Footer y Estado del Formulario
+   ========================================= */
+footer {
+    padding: 60px 0;
+    background-color: var(--beige);
+    text-align: center;
+    border-top: 1px solid rgba(16, 29, 51, 0.1);
+}
+
+.pinyon {
+    font-family: 'Pinyon Script', cursive;
+    font-size: 2.5rem;
+    color: var(--gold);
+    margin-bottom: 10px;
+}
+
+.names-footer {
+    font-family: 'Cinzel', serif;
+    color: var(--navy);
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+}
+
+.visitor-counter {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+.hidden { display: none; }
+
+.status-message {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Loader simple CSS */
+.loader {
+    border: 3px solid var(--beige-dark);
+    border-top: 3px solid var(--gold);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+}
+
+/* =========================================
+   Keyframes (Animaciones)
+   ========================================= */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* =========================================
+   Responsive (Celulares)
+   ========================================= */
+@media (max-width: 768px) {
+    .names { font-size: 3.5rem; }
+    h2 { font-size: 2rem; }
+    .card { width: 100%; }
+    .countdown { flex-wrap: wrap; }
+}

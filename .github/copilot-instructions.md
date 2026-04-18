@@ -1,0 +1,17 @@
+- [x] Verify that the copilot-instructions.md file in the .github directory is created.
+- [x] Clarify Project Requirements
+  - Starting with a basic wedding invitation website in HTML/CSS/JS.
+- [x] Scaffold the Project
+  - Created `index.html`, `styles.css`, `script.js`, and `README.md`.
+- [x] Customize the Project
+  - Added a responsive invitation layout and RSVP button.
+- [ ] Install Required Extensions
+  - No specific extensions required for this project.
+- [x] Compile the Project
+  - No compilation step required for basic static files.
+- [ ] Create and Run Task
+  - Not required for static HTML/CSS/JS.
+- [ ] Launch the Project
+  - Open `index.html` in a browser or use Live Server if available.
+- [x] Ensure Documentation is Complete
+  - Added `README.md` with usage instructions.
