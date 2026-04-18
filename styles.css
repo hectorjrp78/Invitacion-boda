@@ -175,12 +175,12 @@ h2::after {
 .monstrance-bg {
     position: absolute;
     top: -10%; right: -5%;
-    width: 1400px;
-    height: 1400px;
-    background-image: url('https://img.freepik.com/premium-photo/blessed-sacrament-exposition-monstrance-with-catholic-priest-background-adoration-ceremony_933496-33984.jpg'); /* Imagen simbólica */
+    width: 650px;
+    height: 650px;
+    background-image: url(/images/Santisimo\ Sacramento.png);
     background-size: contain;
     background-repeat: no-repeat;
-    opacity: 0.09; /* Casi invisible, muy sutil */
+    opacity: 0.1; /* Casi invisible, muy sutil */
     z-index: 1;
 }
 
@@ -215,13 +215,14 @@ h2::after {
 }
 
 .card-icon {
-    font-size: 3rem;
+    font-size: 4rem;
     margin-bottom: 20px;
     display: inline-block;
     color: var(--gold);
 }
 
 .card h3 {
+    font-size: 1.6rem;
     font-family: 'Cinzel', serif;
     color: var(--navy);
     margin-bottom: 15px;
@@ -230,18 +231,20 @@ h2::after {
 .time {
     font-family: 'Cinzel', serif;
     color: var(--gold);
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
 .place {
+    font-size: 1.3rem;
     font-weight: bold;
+
     margin-bottom: 5px;
 }
 
 .address {
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     color: #666;
     margin-bottom: 25px;
 }

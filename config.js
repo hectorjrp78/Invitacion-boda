@@ -1,7 +1,7 @@
 // Archivo: config.js
 const CONFIG = {
     // 1. Datos Generales
-    nombres: "Nathalie & Hector",
+    nombres: "Hector & Nathalie",
     fechaTexto: "30 . MAYO . 2026",
     fechaContador: new Date(2026, 4, 30, 19, 30, 0).getTime(), // Año, Mes(0-11), Día, Hora, Min
     
@@ -10,15 +10,15 @@ const CONFIG = {
     
     // 3. Códigos de Acceso (Hashes SHA-256)
     // Para generar nuevos hashes, busca en Google "Generador SHA-256 online"
-    hash_novia: "3b4b8a211eb9b46e885d5622a578a1bc1b49f9df35eab4e4142f1cf1c42f0672", // Equivale a "MARIA2026"
-    hash_novio: "4d1bd8ab2ea4dcd91ecba42e5d590ab8bfab69d443bdc67ed3a2b75a6fde9079", // Equivale a "JUAN2026"
+    hash_novia: "ef797c8118f02dfb649607dd5d3f8c7623048c9c063d532cc95c5ed7a898a64f", // Equivale a "MARIA2026"
+    hash_novio: "481f6cc0511143ccdd7e2d1b1b94faf0a700a8b49cd13922a70b5ae28acaa8c5", // Equivale a "JUAN2026"
 
     // 4. Ubicaciones
     ceremonia: {
         hora: "7:30 PM",
         lugar: "Iglesia la Preciosisima Sangre",
         direccion: "Santa Eduvigis",
-        mapa_url: "https://maps.google.com/..." // Reemplazar con el link real
+        mapa_url: "https://maps.app.goo.gl/KH1eWnd3tpSD9xrr6" // Reemplazar con el link real
     },
     recepcion: {
         hora: "10:30 PM",

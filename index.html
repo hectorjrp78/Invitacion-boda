@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nathalie & Hector - Nuestra Boda</title>
+    <title>Héctor & Nathalie - Nuestra Boda</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Pinyon+Script&family=Lato:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
-
     <header class="hero">
-        <div class="hero-overlay"></div>
+        <div class="hero-overlay">
+
+        </div>
         <div class="hero-content">
             <div class="rings-icon">
                 <svg viewBox="0 0 100 100" class="gold-svg">
@@ -21,32 +22,29 @@
             <p class="pre-title">Nuestra Boda</p>
             <h1 class="names" id="ui-nombres"></h1>
             <p class="save-the-date" id="ui-fecha"></p>
-            
+
             <div id="countdown" class="countdown">
-                </div>
+
+            </div>
             <a href="#rsvp" class="btn-gold scroll-link">Confirmar Asistencia</a>
         </div>
     </header>
-
-    <section id="detalles" class="locations reveal.active">
-        <div class="monstrance-bg"></div> <div class="container">
-            <h2>Los Detalles</h2>
+    <section id="detallesC" class="locations reveal.active">
+        <div class="monstrance-bg"></div> 
+        <div class="container">
+            <h2>
+                Los Detalles de la Ceremonia
+            </h2>
             <div class="cards-container">
-                <div class="card reveal-up">
-                    <div class="card-icon">⛪</div>
+                <div class="card reveal-up style="animation-delay: 0.2s;">
+                    <div class="card-icon">
+                        ⛪
+                    </div>
                     <h3>Ceremonia Eclesiástica</h3>
                     <p class="time" id="ui-ceremonia-hora"></p>
                     <p class="place" id="ui-ceremonia-lugar"></p>
                     <p class="address" id="ui-ceremonia-dir"></p>
                     <a href="#" target="_blank" class="btn-outline" id="ui-ceremonia-mapa">Ver Mapa</a>
-                </div>
-                <div class="card reveal-up" style="animation-delay: 0.2s;">
-                    <div class="card-icon">🥂</div>
-                    <h3>Recepción</h3>
-                    <p class="time" id="ui-recepcion-hora"></p>
-                    <p class="place" id="ui-recepcion-lugar"></p>
-                    <p class="address" id="ui-recepcion-dir"></p>
-                    <a href="#" target="_blank" class="btn-outline" id="ui-recepcion-mapa">Ver Mapa</a>
                 </div>
             </div>
         </div>
@@ -97,10 +95,33 @@
         </div>
     </section>
 
+
+    <section id="detallesR" class="locations reveal.active" >
+        <div class="monstrance-bg"></div> 
+        <div class="container">
+            <h2>
+                Los Detalles de la Recepción
+            </h2>
+            <div class="cards-container">
+                <div class="card reveal-up" style="animation-delay: 0.2s;">
+                    <div class="card-icon">
+                        🥂
+                    </div>
+                    <h3>Recepción</h3>
+                    <p class="time" id="ui-recepcion-hora"></p>
+                    <p class="place" id="ui-recepcion-lugar"></p>
+                    <p class="address" id="ui-recepcion-dir"></p>
+                    <a href="#" target="_blank" class="btn-outline" id="ui-recepcion-mapa">Ver Mapa</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     <footer>
         <div class="container">
             <p class="pinyon">Te esperamos,</p>
-            <p class="names-footer">N & H</p>
+            <p class="names-footer">H & N</p>
             <div class="visitor-counter">
                 <p>Visitas:</p>
                 <img src="https://hitwebcounter.com/counter/counter.php?page=SU_ID_UNICO&style=0006&nbdigits=5&type=page&initCount=0" title="Contador" Alt="Contador" border="0" />
