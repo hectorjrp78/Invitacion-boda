@@ -385,7 +385,7 @@ footer {
     color: #888;
 }
 
-.hidden { display: none; }
+.hidden { display: none !important; }
 
 .status-message {
     margin-top: 20px;

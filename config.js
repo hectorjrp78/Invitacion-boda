@@ -10,8 +10,16 @@ const CONFIG = {
     
     // 3. Códigos de Acceso (Hashes SHA-256)
     // Para generar nuevos hashes, busca en Google "Generador SHA-256 online"
-    hash_novia: "ef797c8118f02dfb649607dd5d3f8c7623048c9c063d532cc95c5ed7a898a64f", // Equivale a "MARIA2026"
+    hash_novia: "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92", // Equivale a "MARIA2026"
     hash_novio: "481f6cc0511143ccdd7e2d1b1b94faf0a700a8b49cd13922a70b5ae28acaa8c5", // Equivale a "JUAN2026"
+  
+    // ... datos anteriores ...
+    hash_iglesia_novia: "03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4", 
+    hash_iglesia_novio: "fe2592b42a727e977f055947385b709cc82b16b9a87f88c6abf3900d65d0cdc3",
+    mensajes: {
+        iglesia: "Tu presencia en el Sacramento de nuestro Matrimonio es el mayor regalo que podemos recibir. ¡Gracias por acompañarnos en este paso de fe!",
+        recepcion: "¡Nos encantará celebrar con ustedes en la recepción!"
+    },
 
     // 4. Ubicaciones
     ceremonia: {

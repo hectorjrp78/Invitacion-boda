@@ -61,6 +61,101 @@ const form = document.getElementById('rsvp-form');
 const hiddenLado = document.getElementById('invitado_de');
 
 btnVerificar.addEventListener('click', async () => {
+    let codigo = inputCodigo.value.trim().toUpperCase().replace(/[^A-Z0-9]/g, '');
+    let hash = await encriptarSHA256(codigo);
+    
+    const tipoInput = document.getElementById('tipo_registro');
+    const msgContexto = document.getElementById('mensaje-contexto');
+    const divAcompanantes = document.querySelector('.acompanantes-flex');
+    const seccionRecepcion = document.getElementById('recepcion');
+
+    if (hash === CONFIG.hash_novia || hash === CONFIG.hash_novio) {
+        // --- ESCENARIO: RECEPCIÓN ---
+        if(tipoInput) tipoInput.value = 'recepcion';
+        if(msgContexto) msgContexto.innerText = CONFIG.mensajes.recepcion;
+        
+        mostrarSecciones(['detalles-celebracion', 'rsvp-form', 'recepcion']);
+        if(divAcompanantes) divAcompanantes.style.display = 'flex';
+        
+    } else if (hash === CONFIG.hash_iglesia_novia || hash === CONFIG.hash_iglesia_novio) {
+        // --- ESCENARIO: SOLO IGLESIA ---
+        if(tipoInput) tipoInput.value = 'iglesia';
+        if(msgContexto) msgContexto.innerText = CONFIG.mensajes.iglesia;
+        
+        mostrarSecciones(['detalles-celebracion', 'rsvp-form']);
+        
+        // Ocultamos con seguridad
+        if(seccionRecepcion) seccionRecepcion.style.display = 'none';
+        if(divAcompanantes) divAcompanantes.style.display = 'none';
+    } else {
+        if(errorCodigo) errorCodigo.classList.remove('hidden');
+        return; 
+    }
+
+    if(codigoSection) codigoSection.classList.add('hidden');
+});
+
+/* btnVerificar.addEventListener('click', async () => {
+    let codigo = inputCodigo.value.trim().toUpperCase().replace(/[^A-Z0-9]/g, '');
+    let hash = await encriptarSHA256(codigo);
+    
+    const tipoInput = document.getElementById('tipo_registro');
+    const msgContexto = document.getElementById('mensaje-contexto');
+
+    if (hash === CONFIG.hash_novia || hash === CONFIG.hash_novio) {
+        // ESCENARIO: RECEPCIÓN COMPLETA
+        tipoInput.value = 'recepcion';
+        msgContexto.innerText = CONFIG.mensajes.recepcion;
+        
+        // Ejecutamos la función que antes faltaba
+        mostrarSecciones(['detalles-celebracion', 'rsvp-form', 'recepcion']);
+        
+        // Aseguramos que los campos de acompañantes se vean
+        document.querySelector('.acompanantes-flex').style.display = 'flex';
+        
+    } else if (hash === CONFIG.hash_iglesia_novia || hash === CONFIG.hash_iglesia_novio) {
+        // ESCENARIO: SOLO IGLESIA
+        tipoInput.value = 'iglesia';
+        msgContexto.innerText = CONFIG.mensajes.iglesia;
+        
+        mostrarSecciones(['detalles-celebracion', 'rsvp-form']);
+        
+        // Ocultamos específicamente la sección de recepción y acompañantes
+        document.getElementById('recepcion').style.display = 'none';
+        document.querySelector('.acompanantes-flex').style.display = 'none';
+    } else {
+        errorCodigo.classList.remove('hidden');
+        return; // Salimos si el código es erróneo
+    }
+
+    // Si el código fue correcto (cualquiera de los dos), ocultamos el validador
+    codigoSection.classList.add('hidden');
+});
+ */
+// Función para mostrar múltiples elementos por su ID
+function mostrarSecciones(listaIDs) {
+    listaIDs.forEach(id => {
+        const elemento = document.getElementById(id);
+        if (elemento) {
+            elemento.classList.remove('hidden');
+            elemento.style.display = 'block'; 
+        } else {
+            console.warn(`Ojo: El elemento con ID "${id}" no existe en el HTML.`);
+        }
+    });
+}
+/* function mostrarSecciones(listaIDs) {
+    listaIDs.forEach(id => {
+        const elemento = document.getElementById(id);
+        if (elemento) {
+            elemento.classList.remove('hidden');
+            // Si es un flex o block, aseguramos que se vea bien
+            elemento.style.display = 'block'; 
+        }
+    });
+}
+ */
+/* btnVerificar.addEventListener('click', async () => {
     let codigoIngresado = inputCodigo.value.trim().toUpperCase().replace(/[^A-Z0-9]/g, '');
     let hashIngresado = await encriptarSHA256(codigoIngresado);
 
@@ -81,7 +176,7 @@ btnVerificar.addEventListener('click', async () => {
         inputCodigo.value = ""; 
     }
 });
-/* btnVerificar.addEventListener('click', async () => {
+ *//* btnVerificar.addEventListener('click', async () => {
     // 1. Limpiamos lo que escribió el usuario
     let codigoIngresado = inputCodigo.value.trim().toUpperCase().replace(/[^A-Z0-9]/g, '');
     
