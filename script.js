@@ -61,6 +61,27 @@ const form = document.getElementById('rsvp-form');
 const hiddenLado = document.getElementById('invitado_de');
 
 btnVerificar.addEventListener('click', async () => {
+    let codigoIngresado = inputCodigo.value.trim().toUpperCase().replace(/[^A-Z0-9]/g, '');
+    let hashIngresado = await encriptarSHA256(codigoIngresado);
+
+    if (hashIngresado === CONFIG.hash_novia || hashIngresado === CONFIG.hash_novio) {
+        // Acceso Concedido
+        codigoSection.classList.add('hidden');
+        
+        // MOSTRAMOS AMBAS PARTES:
+        form.classList.remove('hidden'); // El formulario RSVP
+        document.getElementById('detalles-celebracion').classList.remove('hidden'); // Los detalles de la boda
+        
+        hiddenLado.value = (hashIngresado === CONFIG.hash_novia) ? "Novia" : "Novio";
+        
+        // Scroll suave hacia los detalles revelados
+        document.getElementById('detalles-celebracion').scrollIntoView({ behavior: 'smooth' });
+    } else {
+        errorCodigo.classList.remove('hidden');
+        inputCodigo.value = ""; 
+    }
+});
+/* btnVerificar.addEventListener('click', async () => {
     // 1. Limpiamos lo que escribió el usuario
     let codigoIngresado = inputCodigo.value.trim().toUpperCase().replace(/[^A-Z0-9]/g, '');
     
@@ -81,7 +102,7 @@ btnVerificar.addEventListener('click', async () => {
         inputCodigo.value = ""; 
     }
 });
-
+ */
 // ==========================================
 // 4. ENVÍO SEGURO DEL FORMULARIO
 // ==========================================

@@ -1,7 +1,7 @@
 // Archivo: config.js
 const CONFIG = {
     // 1. Datos Generales
-    nombres: "Hector & Nathalie",
+    nombres: "Héctor José & Nathalie del Carmen",
     fechaTexto: "30 . MAYO . 2026",
     fechaContador: new Date(2026, 4, 30, 19, 30, 0).getTime(), // Año, Mes(0-11), Día, Hora, Min
     
@@ -16,7 +16,7 @@ const CONFIG = {
     // 4. Ubicaciones
     ceremonia: {
         hora: "7:30 PM",
-        lugar: "Iglesia la Preciosisima Sangre",
+        lugar: "Iglesia la Preciosísima Sangre",
         direccion: "Santa Eduvigis",
         mapa_url: "https://maps.app.goo.gl/KH1eWnd3tpSD9xrr6" // Reemplazar con el link real
     },
