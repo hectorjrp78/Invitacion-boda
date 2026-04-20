@@ -25,7 +25,7 @@ const CONFIG = {
     ceremonia: {
         hora: "7:30 PM",
         lugar: "Iglesia la Preciosísima Sangre",
-        direccion: "Santa Eduvigis",
+        direccion: "1ra Avenida con 4ta Transversal, Santa Eduvigis, Caracas, Venezuela",
         mapa_url: "https://maps.app.goo.gl/KH1eWnd3tpSD9xrr6" // Reemplazar con el link real
     },
     recepcion: {

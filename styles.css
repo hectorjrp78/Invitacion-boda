@@ -97,8 +97,9 @@ h2::after {
 }
 
 .rings-icon {
-    width: 80px;
+    width: 180px;
     margin: 0 auto 20px;
+    opacity: 0.75;
 }
 
 .gold-svg {
@@ -109,14 +110,23 @@ h2::after {
     font-family: 'Lato', sans-serif;
     text-transform: uppercase;
     letter-spacing: 5px;
-    font-size: 0.9rem;
+    font-size: 1.3rem;
     color: var(--gold-light);
     margin-bottom: 10px;
 }
 
 .names {
-    font-family: 'Pinyon Script', cursive;
-    font-size: 5rem;
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.9rem;
+    color: var(--gold);
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.msg {
+    font-family: 'Gabriola', cursive;
+    font-size: 1.8rem;
     color: var(--gold);
     margin-bottom: 20px;
     line-height: 1.1;
@@ -124,8 +134,9 @@ h2::after {
 
 .save-the-date {
     font-family: 'Cinzel', serif;
-    font-size: 1.2rem;
-    letter-spacing: 3px;
+    font-size: 1.8rem;
+    letter-spacing: 8px;
+    /* color: var(--gold-light); */
     margin-bottom: 30px;
 }
 
@@ -173,15 +184,22 @@ h2::after {
 
 /* Imagen de fondo sutil del Santísimo Sacramento */
 .monstrance-bg {
-    position: absolute;
-    top: -10%; right: -5%;
-    width: 650px;
-    height: 650px;
-    background-image: url(/images/Santisimo\ Sacramento.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    opacity: 0.1; /* Casi invisible, muy sutil */
-    z-index: 1;
+  /* Usamos fixed para que el fondo se quede quieto aunque el usuario haga scroll hacia abajo */
+  position: fixed; /* Cambiado a scroll para que se mueva con el contenido */
+  top: 0; 
+  left: 0;
+  /* 100vw y 100vh significan el 100% del ancho y alto visual de la pantalla */
+  width: 100vw;
+  height: 100vh;
+  background-image: url(/images/Santisimo\ Sacramento.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  /* Puedes mantener 'contain' o cambiarlo a un tamaño fijo ej: '800px' si no quieres que la imagen crezca demasiado en pantallas gigantes */
+  background-size: contain; 
+  opacity: 0.08;
+  /* Nota: Para un fondo sutil, es mejor un z-index negativo para asegurar que no bloquee los clics en los botones o textos que pongas encima */
+  z-index: 10;
+  pointer-events: none;
 }
 
 .locations .container {
@@ -231,21 +249,23 @@ h2::after {
 .time {
     font-family: 'Cinzel', serif;
     color: var(--gold);
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
 .place {
-    font-size: 1.3rem;
+    font-family: 'Cinzel', serif;
+    font-size: 1.5rem;
     font-weight: bold;
-
     margin-bottom: 5px;
 }
 
 .address {
+    font-family: 'Cinzel', serif;
     font-size: 1.2rem;
     color: #666;
+    font-weight: bold;
     margin-bottom: 25px;
 }
 
@@ -311,7 +331,7 @@ select option {
     text-decoration: none;
     font-family: 'Cinzel', serif;
     text-transform: uppercase;
-    font-size: 0.8rem;
+    font-size: 1.1rem;
     letter-spacing: 2px;
     font-weight: bold;
     transition: all 0.3s ease;
@@ -367,17 +387,25 @@ footer {
 
 .pinyon {
     font-family: 'Pinyon Script', cursive;
-    font-size: 2.5rem;
-    color: var(--gold);
+    font-size: 3.5rem;
+    color: var(--navy);
     margin-bottom: 10px;
 }
 
 .names-footer {
     font-family: 'Cinzel', serif;
     color: var(--navy);
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     letter-spacing: 3px;
     margin-bottom: 30px;
+}
+
+.footer-msg {
+    font-family: 'Gabriola', cursive;
+    font-size: 1.8rem;
+    color: var(--navy);
+    margin-bottom: 20px;
+    line-height: 1.5;
 }
 
 .visitor-counter {

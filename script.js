@@ -68,12 +68,12 @@ btnVerificar.addEventListener('click', async () => {
     const msgContexto = document.getElementById('mensaje-contexto');
     const divAcompanantes = document.querySelector('.acompanantes-flex');
     const seccionRecepcion = document.getElementById('recepcion');
-
+    //hiddenLado.value = (hash === CONFIG.hash_novia || hash === CONFIG.hash_iglesia_novia) ? "Novia" : "Novio";
     if (hash === CONFIG.hash_novia || hash === CONFIG.hash_novio) {
         // --- ESCENARIO: RECEPCIÓN ---
         if(tipoInput) tipoInput.value = 'recepcion';
         if(msgContexto) msgContexto.innerText = CONFIG.mensajes.recepcion;
-        
+        hiddenLado.value = (hash === CONFIG.hash_novia) ? "Novia" : "Novio";
         mostrarSecciones(['detalles-celebracion', 'rsvp-form', 'recepcion']);
         if(divAcompanantes) divAcompanantes.style.display = 'flex';
         
@@ -81,7 +81,7 @@ btnVerificar.addEventListener('click', async () => {
         // --- ESCENARIO: SOLO IGLESIA ---
         if(tipoInput) tipoInput.value = 'iglesia';
         if(msgContexto) msgContexto.innerText = CONFIG.mensajes.iglesia;
-        
+        hiddenLado.value = (hash === CONFIG.hash_iglesia_novia) ? "Novia" : "Novio";
         mostrarSecciones(['detalles-celebracion', 'rsvp-form']);
         
         // Ocultamos con seguridad
