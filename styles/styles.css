@@ -71,7 +71,8 @@ h2::after {
    Sección Hero (Bienvenida)
    ========================================= */
 .hero {
-    height: 100vh;
+    min-height: 100vh;
+    /* height: 100vh; */
     background-color: var(--navy);
     background-image: url('https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2070'); /* Imagen de fondo elegante */
     background-size: cover;
@@ -100,8 +101,10 @@ h2::after {
     display: block;
     margin: 0 auto;
     padding-top: 20px;
-    width: auto;
+    /* width: auto; */
+    height: auto;
     max-width: 180px;
+    margin-bottom: 20px;
     opacity: 0.75;
 }
 
@@ -146,19 +149,42 @@ h2::after {
 /* =========================================
    Contador de Tiempo Dinámico
    ========================================= */
-.countdown {
+#countdown {
     display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 40px;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;     /* Centra verticalmente */
+    gap: 10px;               /* Espacio entre los cuadros */
+    width: 100%;             /* Ocupa el ancho disponible */
+    max-width: 450px;        /* Evita que se estire demasiado en PC */
+    margin: 20px auto;       /* El 'auto' en los lados centra el bloque entero */
+    padding: 0 10px;         /* Margen interno para que no toque los bordes del cel */
 }
+/* .countdown {
+    display: flex;
+    /* justify-content: center; */
+    /* gap: 15px; */
+    /* margin-bottom: 40px; */
+/*
+    gap: 10px;
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 400px;
+    justify-content: center;
+} */
 
 .time-block {
-    background: rgba(251, 249, 241, 0.1);
-    padding: 15px;
+    /* background: rgba(251, 249, 241, 0.1); */
+    /* padding: 15px; */
     border-radius: 8px;
-    min-width: 80px;
-    border: 1px solid rgba(197, 160, 89, 0.3);
+    /* min-width: 80px; */
+    /* border: 1px solid rgba(197, 160, 89, 0.3); */
+
+    background: rgba(212, 175, 55, 0.2); /* Tu dorado con transparencia */
+    border: 1px solid var(--dorado);
+    padding: 10px;
+    /* border-radius: 8px; */
+    flex: 1; /* Esto hace que todos los cuadros midan lo mismo */
+    min-width: 60px;
 }
 
 .time-number {
@@ -194,7 +220,7 @@ h2::after {
   /* 100vw y 100vh significan el 100% del ancho y alto visual de la pantalla */
   width: 100vw;
   height: 100vh;
-  background-image: url(./images/Santisimo.png);
+  background-image: url(./../images/Santisimo.png);
   background-position: center;
   background-repeat: no-repeat;
   /* Puedes mantener 'contain' o cambiarlo a un tamaño fijo ej: '800px' si no quieres que la imagen crezca demasiado en pantallas gigantes */
@@ -460,3 +486,4 @@ footer {
     .card { width: 100%; }
     .countdown { flex-wrap: wrap; }
 }
+

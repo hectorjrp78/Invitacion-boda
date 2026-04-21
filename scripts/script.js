@@ -74,7 +74,7 @@ btnVerificar.addEventListener('click', async () => {
         if(tipoInput) tipoInput.value = 'recepcion';
         if(msgContexto) msgContexto.innerText = CONFIG.mensajes.recepcion;
         hiddenLado.value = (hash === CONFIG.hash_novia) ? "Novia" : "Novio";
-        mostrarSecciones(['detalles-celebracion', 'rsvp-form', 'recepcion']);
+        mostrarSecciones(['detalles-celebracion', 'rsvp-form', 'recepcion', 'detalle-amor']);
         if(divAcompanantes) divAcompanantes.style.display = 'flex';
         
     } else if (hash === CONFIG.hash_iglesia_novia || hash === CONFIG.hash_iglesia_novio) {
@@ -82,7 +82,7 @@ btnVerificar.addEventListener('click', async () => {
         if(tipoInput) tipoInput.value = 'iglesia';
         if(msgContexto) msgContexto.innerText = CONFIG.mensajes.iglesia;
         hiddenLado.value = (hash === CONFIG.hash_iglesia_novia) ? "Novia" : "Novio";
-        mostrarSecciones(['detalles-celebracion', 'rsvp-form']);
+        mostrarSecciones(['detalles-celebracion', 'rsvp-form', 'detalle-amor']);
         
         // Ocultamos con seguridad
         if(seccionRecepcion) seccionRecepcion.style.display = 'none';
@@ -95,43 +95,6 @@ btnVerificar.addEventListener('click', async () => {
     if(codigoSection) codigoSection.classList.add('hidden');
 });
 
-/* btnVerificar.addEventListener('click', async () => {
-    let codigo = inputCodigo.value.trim().toUpperCase().replace(/[^A-Z0-9]/g, '');
-    let hash = await encriptarSHA256(codigo);
-    
-    const tipoInput = document.getElementById('tipo_registro');
-    const msgContexto = document.getElementById('mensaje-contexto');
-
-    if (hash === CONFIG.hash_novia || hash === CONFIG.hash_novio) {
-        // ESCENARIO: RECEPCIÓN COMPLETA
-        tipoInput.value = 'recepcion';
-        msgContexto.innerText = CONFIG.mensajes.recepcion;
-        
-        // Ejecutamos la función que antes faltaba
-        mostrarSecciones(['detalles-celebracion', 'rsvp-form', 'recepcion']);
-        
-        // Aseguramos que los campos de acompañantes se vean
-        document.querySelector('.acompanantes-flex').style.display = 'flex';
-        
-    } else if (hash === CONFIG.hash_iglesia_novia || hash === CONFIG.hash_iglesia_novio) {
-        // ESCENARIO: SOLO IGLESIA
-        tipoInput.value = 'iglesia';
-        msgContexto.innerText = CONFIG.mensajes.iglesia;
-        
-        mostrarSecciones(['detalles-celebracion', 'rsvp-form']);
-        
-        // Ocultamos específicamente la sección de recepción y acompañantes
-        document.getElementById('recepcion').style.display = 'none';
-        document.querySelector('.acompanantes-flex').style.display = 'none';
-    } else {
-        errorCodigo.classList.remove('hidden');
-        return; // Salimos si el código es erróneo
-    }
-
-    // Si el código fue correcto (cualquiera de los dos), ocultamos el validador
-    codigoSection.classList.add('hidden');
-});
- */
 // Función para mostrar múltiples elementos por su ID
 function mostrarSecciones(listaIDs) {
     listaIDs.forEach(id => {
@@ -144,60 +107,7 @@ function mostrarSecciones(listaIDs) {
         }
     });
 }
-/* function mostrarSecciones(listaIDs) {
-    listaIDs.forEach(id => {
-        const elemento = document.getElementById(id);
-        if (elemento) {
-            elemento.classList.remove('hidden');
-            // Si es un flex o block, aseguramos que se vea bien
-            elemento.style.display = 'block'; 
-        }
-    });
-}
- */
-/* btnVerificar.addEventListener('click', async () => {
-    let codigoIngresado = inputCodigo.value.trim().toUpperCase().replace(/[^A-Z0-9]/g, '');
-    let hashIngresado = await encriptarSHA256(codigoIngresado);
 
-    if (hashIngresado === CONFIG.hash_novia || hashIngresado === CONFIG.hash_novio) {
-        // Acceso Concedido
-        codigoSection.classList.add('hidden');
-        
-        // MOSTRAMOS AMBAS PARTES:
-        form.classList.remove('hidden'); // El formulario RSVP
-        document.getElementById('detalles-celebracion').classList.remove('hidden'); // Los detalles de la boda
-        
-        hiddenLado.value = (hashIngresado === CONFIG.hash_novia) ? "Novia" : "Novio";
-        
-        // Scroll suave hacia los detalles revelados
-        document.getElementById('detalles-celebracion').scrollIntoView({ behavior: 'smooth' });
-    } else {
-        errorCodigo.classList.remove('hidden');
-        inputCodigo.value = ""; 
-    }
-});
- *//* btnVerificar.addEventListener('click', async () => {
-    // 1. Limpiamos lo que escribió el usuario
-    let codigoIngresado = inputCodigo.value.trim().toUpperCase().replace(/[^A-Z0-9]/g, '');
-    
-    // 2. Encriptamos la palabra que escribió
-    let hashIngresado = await encriptarSHA256(codigoIngresado);
-
-    // 3. Comparamos los Hashes
-    if (hashIngresado === CONFIG.hash_novia) {
-        codigoSection.classList.add('hidden');
-        form.classList.remove('hidden');
-        hiddenLado.value = "Novia";
-    } else if (hashIngresado === CONFIG.hash_novio) {
-        codigoSection.classList.add('hidden');
-        form.classList.remove('hidden');
-        hiddenLado.value = "Novio";
-    } else {
-        errorCodigo.classList.remove('hidden');
-        inputCodigo.value = ""; 
-    }
-});
- */
 // ==========================================
 // 4. ENVÍO SEGURO DEL FORMULARIO
 // ==========================================

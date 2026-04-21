@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
     <title>Héctor & Nathalie - Nuestra Boda</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./styles/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Pinyon+Script&family=Lato:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -29,6 +29,7 @@
             <a href="#rsvp" class="btn-gold scroll-link">Confirmar Asistencia</a>
         </div>
     </header>
+    <!-- Detalle de Detalles -->
     <section id="detalles" class="locations reveal.active">
         <div class="monstrance-bg"></div> 
         <div class="container">
@@ -48,6 +49,7 @@
             </div>
         </div>
     </section>
+    <!-- Detalle de Celebración -->
 <div id="detalles-celebracion" class="hidden">
     <div id="recepcion" class="hidden">
     <section id="detalles" class="locations reveal.active" >
@@ -71,7 +73,44 @@
     </section>
     </div>
 </div>
+<!-- Detalle de Amor -->
+<section id="detalle-amor" class="hidden" style="background-color: #000080 !important; border: 3px solid #D4AF37; border-radius: 15px; padding: 40px 20px; margin: 30px auto; text-align: center; max-width: 800px; box-shadow: 0 10px 20px rgba(0,0,0,0.3); display: none;">
+    
+    <h2 style="color: #D4AF37 !important; font-family: 'Playfair Display', serif; font-size: 2.2em; margin-bottom: 20px; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">Detalle de Amor</h2>
+    
+    <p style="color: #F5F5DC !important; margin-bottom: 30px; font-size: 1.1em; line-height: 1.6; max-width: 600px; margin-left: auto; margin-right: auto;">
+        El regalo más grande es que nos acompañen en este día tan especial. <br>
+        Sin embargo, si desean tener un detalle adicional y ayudarnos a construir nuestro primer hogar juntos, pueden hacerlo a través de los siguientes medios:
+    </p>
+    
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 25px; margin-top: 20px;">
+        
+        <div class="cuentas-bancarias" style="text-align: left; background: rgba(255, 255, 255, 0.1); padding: 25px; border-radius: 10px; border-left: 5px solid #D4AF37; color: #F5F5DC; min-width: 280px;">
+            <p style="margin-bottom: 12px;">
+                <strong style="color: #D4AF37;">Zelle:</strong><br>
+                tucorreo@ejemplo.com<br>
+                <span style="font-size: 0.9em; opacity: 0.9;">Nombre del Titular</span>
+            </p>
+            <hr style="border-color: rgba(212, 175, 55, 0.3); margin: 15px 0;">
+            <p style="margin-bottom: 12px;">
+                <strong style="color: #D4AF37;">Pago Móvil:</strong><br>
+                Banco - Teléfono<br>
+                <span style="font-size: 0.9em; opacity: 0.9;">Cédula de Identidad</span>
+            </p>
+        </div>
 
+        <div class="codigo-qr" style="background: white; padding: 15px; border-radius: 12px; border: 3px solid #D4AF37; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
+            <img src="qr-zelle.png" alt="QR de Pago" style="width: 180px; height: 180px; display: block; margin: 0 auto;">
+            <p style="color: #000080; font-size: 0.85em; font-weight: bold; margin-top: 10px; margin-bottom: 0;">Escanea para transferir</p>
+        </div>
+
+    </div>
+    
+    <p style="margin-top: 35px; font-size: 0.95em; font-style: italic; color: rgba(245, 245, 220, 0.9);">
+        *Si realizas un aporte, por favor envíanos el comprobante vía WhatsApp. ¡Gracias por tu generosidad!*
+    </p>
+</section>
+<!-- Sección de Confirmación -->
 <section id="rsvp" class="rsvp reveal.active">
         <div class="container">
             <h2>Confirmación</h2>
@@ -133,6 +172,11 @@
 
                     <input type="hidden" id="invitado_de" name="invitado_de" value="">
 
+                    <div class="input-group" style="margin-top: 15px; margin-bottom: 20px;">
+                        <label style="color: var(--gold-light); font-size: 1em;">Déjanos un mensaje, consejo o deseo para nuestro matrimonio ❤️</label>
+                        <textarea name="mensaje_amor" rows="3" placeholder="Nos hace mucha ilusión leerlos..." style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc; font-family: inherit; resize: vertical;"></textarea>
+                    </div>
+
                     <button type="submit" class="btn-gold-full">Enviar Respuesta</button>
                 </form>
 
@@ -159,7 +203,7 @@
         </div>
     </footer>
 
-    <script src="config.js"></script>
-    <script src="script.js"></script>
+    <script src="./config.js"></script>
+    <script src="./scripts/script.js"></script>
 </body>
 </html>
