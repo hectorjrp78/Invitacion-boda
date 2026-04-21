@@ -20,7 +20,7 @@
             <h1 class="names" id="ui-nombres"></h1>
             <div class="container">
                 <p class="msg">
-                    Nuestro Amor nació de la gracia y lo queremos sellar con la Bendición de Dios. <br>Con el corazón lleno de humildad, queremos compartir con ustedes el milagro de habernos encontrado. Un amor verdadero no hace ruido, simplemente transforma y llena el alma. Damos este paso con profunda alegría y sencillez, sabiendo que el regalo más grande es prometernos cuidado y respeto todos los días de nuestras vidas.
+                    Nuestro Amor nació de la gracia y lo queremos sellar con la Bendición de Dios. <br> Damos este paso con profunda alegría y sencillez, sabiendo que el regalo más grande es prometernos cuidado y respeto todos los días de nuestras vidas. <br>Con el corazón lleno de humildad, queremos compartir con ustedes el milagro de habernos encontrado. Un amor verdadero no hace ruido, simplemente transforma y llena el alma.
                 </p>
             </div>
             <p class="save-the-date" id="ui-fecha"></p>
@@ -74,41 +74,48 @@
     </div>
 </div>
 <!-- Detalle de Amor -->
-<section id="detalle-amor" class="hidden" style="background-color: #000080 !important; border: 3px solid #D4AF37; border-radius: 15px; padding: 40px 20px; margin: 30px auto; text-align: center; max-width: 800px; box-shadow: 0 10px 20px rgba(0,0,0,0.3); display: none;">
-    
-    <h2 style="color: #D4AF37 !important; font-family: 'Playfair Display', serif; font-size: 2.2em; margin-bottom: 20px; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">Detalle de Amor</h2>
-    
-    <p style="color: #F5F5DC !important; margin-bottom: 30px; font-size: 1.1em; line-height: 1.6; max-width: 600px; margin-left: auto; margin-right: auto;">
-        El regalo más grande es que nos acompañen en este día tan especial. <br>
-        Sin embargo, si desean tener un detalle adicional y ayudarnos a construir nuestro primer hogar juntos, pueden hacerlo a través de los siguientes medios:
-    </p>
-    
-    <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 25px; margin-top: 20px;">
+<section id="detalle-amor" class="rsvp hidden">
+    <div class="container">
         
-        <div class="cuentas-bancarias" style="text-align: left; background: rgba(255, 255, 255, 0.1); padding: 25px; border-radius: 10px; border-left: 5px solid #D4AF37; color: #F5F5DC; min-width: 280px;">
-            <p style="margin-bottom: 12px;">
-                <strong style="color: #D4AF37;">Zelle:</strong><br>
-                tucorreo@ejemplo.com<br>
-                <span style="font-size: 0.9em; opacity: 0.9;">Nombre del Titular</span>
-            </p>
-            <hr style="border-color: rgba(212, 175, 55, 0.3); margin: 15px 0;">
-            <p style="margin-bottom: 12px;">
-                <strong style="color: #D4AF37;">Pago Móvil:</strong><br>
-                Banco - Teléfono<br>
-                <span style="font-size: 0.9em; opacity: 0.9;">Cédula de Identidad</span>
+        <h2>Detalle de Amor</h2>
+        
+        <div class="form-wrapper">
+            <p style="font-size: 1.1rem; line-height: 1.6; color: var(--gold-light);">
+                El regalo más grande es que nos acompañen en este día tan especial. <br>
+                Sin embargo, si desean tener un detalle adicional y ayudarnos a construir nuestro primer hogar juntos, pueden hacerlo a través de los siguientes medios:
             </p>
         </div>
+        
+        <div class="cards-container" style="margin-top: 40px; align-items: center;">
+            
+            <div class="time-block" style="text-align: left; padding: 30px; flex: 0 1 350px;">
+                <p style="margin-bottom: 15px; color: var(--beige);">
+                    <strong style="color: var(--gold); font-family: 'Cinzel', serif; font-size: 1.2rem; letter-spacing: 1px;">Zelle:</strong><br>
+                    tucorreo@ejemplo.com<br>
+                    <span style="font-size: 0.9rem; opacity: 0.8;">Nombre del Titular</span>
+                </p>
+                
+                <hr style="border-color: rgba(197, 160, 89, 0.3); margin: 15px 0;">
+                
+                <p style="color: var(--beige); margin-bottom: 0;">
+                    <strong style="color: var(--gold); font-family: 'Cinzel', serif; font-size: 1.2rem; letter-spacing: 1px;">Pago Móvil:</strong><br>
+                    Banco - Teléfono<br>
+                    <span style="font-size: 0.9rem; opacity: 0.8;">Cédula de Identidad</span>
+                </p>
+            </div>
 
-        <div class="codigo-qr" style="background: white; padding: 15px; border-radius: 12px; border: 3px solid #D4AF37; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
-            <img src="qr-zelle.png" alt="QR de Pago" style="width: 180px; height: 180px; display: block; margin: 0 auto;">
-            <p style="color: #000080; font-size: 0.85em; font-weight: bold; margin-top: 10px; margin-bottom: 0;">Escanea para transferir</p>
+            <div class="card" style="padding: 25px; flex: 0 1 280px; animation: none; opacity: 1; transform: none;">
+                <img src="qr-zelle.png" alt="QR de Pago" style="width: 180px; height: 180px; display: block; margin: 0 auto 15px;">
+                <h3 style="font-size: 1.1rem; margin-bottom: 0; color: var(--navy);">Escanea para transferir</h3>
+            </div>
+
         </div>
-
+        
+        <p style="margin-top: 50px; font-size: 0.95rem; font-style: italic; color: var(--gold-light); text-align: center;">
+            *Si realizas un aporte, por favor envíanos el comprobante vía WhatsApp. ¡Gracias por tu generosidad!*
+        </p>
+        
     </div>
-    
-    <p style="margin-top: 35px; font-size: 0.95em; font-style: italic; color: rgba(245, 245, 220, 0.9);">
-        *Si realizas un aporte, por favor envíanos el comprobante vía WhatsApp. ¡Gracias por tu generosidad!*
-    </p>
 </section>
 <!-- Sección de Confirmación -->
 <section id="rsvp" class="rsvp reveal.active">
@@ -161,8 +168,6 @@
                             <option value="2">2</option>
                             <option value="3">3</option>
                             <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
                         </select>
 
                         </div>
@@ -173,8 +178,8 @@
                     <input type="hidden" id="invitado_de" name="invitado_de" value="">
 
                     <div class="input-group" style="margin-top: 15px; margin-bottom: 20px;">
-                        <label style="color: var(--gold-light); font-size: 1em;">Déjanos un mensaje, consejo o deseo para nuestro matrimonio ❤️</label>
-                        <textarea name="mensaje_amor" rows="3" placeholder="Nos hace mucha ilusión leerlos..." style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc; font-family: inherit; resize: vertical;"></textarea>
+                        <label style="color: var(--gold-light); font-size: 1.1em;">Déjanos un mensaje, consejo o deseo para nuestro matrimonio. <br>Nos hace mucha ilusión leerlos... ❤️</label>
+                        <textarea name="mensaje_amor" rows="3" placeholder="..." style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc; font-family: inherit; resize: vertical;"></textarea>
                     </div>
 
                     <button type="submit" class="btn-gold-full">Enviar Respuesta</button>
