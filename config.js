@@ -8,13 +8,13 @@ const CONFIG = {
     // 2. Enlaces y URL
     scriptURL: "https://script.google.com/macros/s/AKfycbyhD76yckQ3hUucDy5pMWh6EDew9RNMIjBTCIaEXNibAuqcAnCSkeNeQyIK1xW9IY-xtg/exec", 
     
-    // 3. Códigos de Acceso (Hashes SHA-256)
+    // 3. Códigos de Acceso (Hashes SHA-256) ---RECEPCION---
     // Para generar nuevos hashes, busca en Google "Generador SHA-256 online"
-    hash_novia: "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92", // Equivale a "MARIA2026"
-    hash_novio: "481f6cc0511143ccdd7e2d1b1b94faf0a700a8b49cd13922a70b5ae28acaa8c5", // Equivale a "JUAN2026"
-    // ... datos anteriores ...
-    hash_iglesia_novia: "03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4", 
-    hash_iglesia_novio: "fe2592b42a727e977f055947385b709cc82b16b9a87f88c6abf3900d65d0cdc3",
+    hash_novia: "ed2fec3ccbc0b170396201c73ac70f2927f8839a679ba10b55e9fc0829276986", // Equivale a "MARIA2026"
+    hash_novio: "d4ce956372a7ee65f3814be394216231b1c865306ad4d66c8700a9d94af871da", // Equivale a "JUAN2026"
+    // ... CODIGOS ACCESO IGLESIA ...
+    hash_iglesia_novia: "42b62a58485e7e21996b701c292d45c848521be52d2b242726ba9f1e80ad939e", 
+    hash_iglesia_novio: "c3b838803ff85a6e7af3447f35c475b8a37abd5e50f1836166376a5f21632a30",
     mensajes: {
         iglesia: "Tu presencia en el Sacramento de nuestro Matrimonio es el mayor regalo que podemos recibir. ¡Gracias por acompañarnos en este paso de fe!",
         recepcion: "¡Nos encantará celebrar con ustedes en la recepción!"
