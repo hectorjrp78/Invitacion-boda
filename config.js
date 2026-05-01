@@ -29,7 +29,7 @@ const CONFIG = {
             mapa_url: "https://maps.app.goo.gl/KH1eWnd3tpSD9xrr6" // Reemplazar con el link real
         },
         trajeformal: "Traje Formal",
-        recepcion: "Recepción (Brindis)",
+        recepcionmsg: "Recepción (Brindis)",
         recepcion: {
             hora: "10:00 PM",
             lugar: "Edificio Castillete (salon de fiestas)",
@@ -81,7 +81,7 @@ const CONFIG = {
             mapa_url: "https://maps.app.goo.gl/KH1eWnd3tpSD9xrr6"
         },
         trajeformal: "Formal Attire",
-        recepcion: "Wedding Reception",
+        recepcionmsg: "Wedding Reception",
         recepcion: {
             hora: "10:00 PM",
             lugar: "Castillete Building (party hall)",
@@ -94,7 +94,7 @@ const CONFIG = {
         confirmartitulo: "Confirmation",
         confirmatexto: "Enter the secret code from your digital invitation to access the confirmation.",
         confirmarerror: "Incorrect code. Please verify your invitation.",
-        confircodeaceptada: "¡Código aceptado! Será un honor contar con tu presencia.",
+        confircodeaceptada: "Code accepted! It will be an honor to have your presence.",
         optasistencia1: "Will you attend?",
         optasistencia2: "Yes, I will attend with pleasure",
         optasistencia3: "Unfortunately, I will not be able to attend",
