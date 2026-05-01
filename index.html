@@ -1,265 +1,276 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-5KDQ3W65');</script>
-    <!-- End Google Tag Manager -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
-    <title>Héctor & Nathalie - Nuestra Boda</title>
-    <link rel="stylesheet" href="./styles/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Pinyon+Script&family=Lato:wght@300;400&display=swap" rel="stylesheet">
-</head>
-<body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5KDQ3W65"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    <header class="hero">
-        <div class="hero-overlay">
-        </div>
-        <div class="hero-content">
-            <div class="rings-icon">
-                <img src="./images/anillos-sf.png" width="155" height="123" alt="Anillos" class="rings-icon">
-            </div>
-            <p class="pre-title">Nuestra Boda</p>
-            <br>
-            <h1 class="names" id="ui-nombres"></h1>
-            <br>
-            <div class="container">
-                <p class="msg">
-                    Nuestro Amor nació de la gracia y lo queremos sellar con la Bendición de Dios. <br> Damos este paso con profunda alegría y sencillez, sabiendo que el regalo más grande es prometernos cuidado y respeto todos los días de nuestras vidas. <br>Con el corazón lleno de humildad, queremos compartir con ustedes el milagro de habernos encontrado. Un amor verdadero no hace ruido, simplemente transforma y llena el alma.
-                </p>
-            </div>
-            <p class="save-the-date" id="ui-fecha"></p>
-            <div id="countdown" class="countdown">
-            </div>
-            <a href="#rsvp" class="btn-gold scroll-link">Confirmar Asistencia</a>
-        </div>
-    </header>
-    <!-- Detalle de Detalles -->
-    <section id="detalles" class="locations reveal.active">
-        <div class="monstrance-bg"></div> 
-        <div class="container">
-            <h2>
-                Ceremonia Eclesiástica
-            </h2>
-            <div class="cards-container">
-                <div class="card reveal-up style="animation-delay: 0.2s;">
-                    <div class="card-icon">
-                        ⛪
-                    </div>
-                    <p class="place" id="ui-ceremonia-lugar"></p>
-                    <p class="time" id="ui-ceremonia-hora">a</p>
-                    <p class="address" id="ui-ceremonia-dir"></p>
-                    <p class="place">Traje Formal</p>
-                    <a href="#" target="_blank" class="btn-outline" id="ui-ceremonia-mapa">Ver Mapa</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Detalle de Celebración -->
-<div id="detalles-celebracion" class="hidden">
-    <div id="recepcion" class="hidden">
-    <section id="detalles" class="locations reveal.active" >
-        <div class="monstrance-bg"></div> 
-        <div class="container">
-            <h2>
-                Recepción (Brindis)
-            </h2>
-            <div class="cards-container">
-                <div class="card reveal-up" style="animation-delay: 0.2s;">
-                    <div class="card-icon">
-                        🥂
-                    </div>
-                    <p class="place" id="ui-recepcion-lugar"></p>
-                    <p class="time" id="ui-recepcion-hora"></p>
-                    <p class="address" id="ui-recepcion-dir"></p>
-                    <p class="place">Traje Formal</p>
-                    <a href="#" target="_blank" class="btn-outline" id="ui-recepcion-mapa">Ver Mapa</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    </div>
-</div>
-<!-- Detalle de Amor -->
-<section id="detalle-amor" class="rsvp hidden">
-    <div class="container">
-        
-        <h2>Detalle de Amor</h2>
-        
-        <div class="form-wrapper">
-            <p style="font-size: 1.5rem; line-height: 1.6; color: var(--gold-light); font-family: 'Gabriola', cursive;">
-                El regalo más grande es que nos acompañen en este día tan especial. <br>
-                Sin embargo, si desean tener un detalle adicional y ayudarnos a construir nuestro primer hogar juntos, pueden hacerlo a través de los siguientes medios:
-            </p>
-        </div>
-        
-        <div class="cards-container" style="margin-top: 40px; align-items: center;">
-            
-            <div class="time-block" style="text-align: left; padding: 30px; flex: 0 1 350px;">
-                <p style="color: var(--beige); margin-bottom: 0;">
-                    <strong style="color: var(--gold); font-family: 'Cinzel', serif; font-size: 1.2rem; letter-spacing: 1px;">Pago Móvil:</strong>
-                    <br>
-                    Bancamiga - 0414-277.73.78<br>
-                    <span style="font-size: 0.9rem; opacity: 0.8;">Cédula de Identidad: 13.886.223</span><br><strong style="color: var(--gold); font-family: 'Cinzel', serif; font-size: 1rem; letter-spacing: 1px;">Transferencia:</strong><br>Cta. Corriente: <br>0172-0105-1510-5528-9662
-                </p>
-
-                <hr style="border-color: rgba(197, 160, 89, 0.3); margin: 15px 0;">
-
-                <p style="margin-bottom: 15px; color: var(--beige);">
-                    <strong style="color: var(--gold); font-family: 'Cinzel', serif; font-size: 1.2rem; letter-spacing: 1px;">Binance:</strong><br>
-                    Binance ID: 164388197<br>
-                    <span style="font-size: 0.9rem; opacity: 0.8;">hectorr@gmail.com</span>
-                </p>
-
-                <hr style="border-color: rgba(197, 160, 89, 0.3); margin: 15px 0;">
-
-                <p style="margin-bottom: 15px; color: var(--beige);">
-                    <strong style="color: var(--gold); font-family: 'Cinzel', serif; font-size: 1.2rem; letter-spacing: 1px;">PipolPay:</strong><br>
-                    hectorr78@gmail.com<br>
-                    <span style="font-size: 0.9rem; opacity: 0.8;">Héctor J. Rodríguez P.</span>
-                </p>
-
-                <hr style="border-color: rgba(197, 160, 89, 0.3); margin: 15px 0;">
-
-                <p style="margin-bottom: 15px; color: var(--beige);">
-                    <strong style="color: var(--gold); font-family: 'Cinzel', serif; font-size: 1.2rem; letter-spacing: 1px;">FaceBank:</strong><br>
-                    Beneficiary: HECTOR JOSE RODRIGUEZ PULIDO<br>Account number: 21580029133<br>Routing Number (ABA): 021502189<br>SWIFT: FILCPR22<br>Name of bank: FACEBANK International<br>Bank address: 17 Road 2, Suite 600, Guaynabo, Puerto Rico 00968-1787
-                </p>
-
-                <hr style="border-color: rgba(197, 160, 89, 0.3); margin: 15px 0;">
-
-                <p style="margin-bottom: 15px; color: var(--beige);">
-                    <strong style="color: var(--gold); font-family: 'Cinzel', serif; font-size: 1.2rem; letter-spacing: 1px;">PayPal:</strong><br>
-                    hectorr78@hotmail.com<br>
-                    <span style="font-size: 0.9rem; opacity: 0.8;">Héctor J. Rodríguez P.</span>
-                </p>
-
-                <hr style="border-color: rgba(197, 160, 89, 0.3); margin: 15px 0;">
-
-                <p style="margin-bottom: 15px; color: var(--beige);">
-                    <strong style="color: var(--gold); font-family: 'Cinzel', serif; font-size: 1.2rem; letter-spacing: 1px;">Zinli:</strong><br>
-                    hectorr@gmail.com<br>
-                    <span style="font-size: 0.9rem; opacity: 0.8;">Héctor J. Rodríguez P.</span>
-                </p>
-            </div>
-
-            <div class="card" style="padding: 25px; flex: 0 1 280px; animation: none; opacity: 1; transform: none;">
-                <img src="./images/QR-bancamiga.png" alt="QR de Pago" style="width: 260px; height: 340px; display: block; margin: 0 auto 15px;">
-                <h3 style="font-size: 1rem; margin-bottom: 0; color: var(--navy);">Escanea para transferir</h3>
-                <br>
-                <img src="./images/qr-zinli.png" alt="QR de Pago" style="width: 180px; height: 180px; display: block; margin: 0 auto 15px;">
-                <h3 style="font-size: 1rem; margin-bottom: 0; color: var(--navy);">Escanea para transferir</h3>
-            </div>
-
-        </div>
-        
-        <p style="margin-top: 50px; font-size: 1.5rem; font-style: italic; color: var(--gold-light); text-align: center; font-family: 'Gabriola', cursive;">
-            *Si realizas un aporte, por favor envíanos el comprobante vía WhatsApp. ¡Gracias por tu generosidad!*
-        </p>
-        
-    </div>
-</section>
-<!-- Sección de Confirmación -->
-<section id="rsvp" class="rsvp reveal.active">
-        <div class="container">
-            <h2>Confirmación</h2>
-            <div class="form-wrapper">
-                
-                <div id="codigo-section">
-                    <p>Ingresa el código secreto de tu invitación física para acceder a la confirmación.</p>
-                    <div class="input-group" style="max-width: 300px; margin: 0 auto;">
-                        <input type="text" id="codigo-acceso" placeholder="Ej: MARIA2026" required autocomplete="off">
-                    </div>
-                    <button id="btn-verificar" class="btn-gold" style="margin-top:15px;">Validar Código</button>
-                    <p id="error-codigo" class="hidden" style="color:#ffb3b3; margin-top:15px; font-weight:bold;">
-                        Código incorrecto. Por favor, verifica tu invitación.
-                    </p>
-                </div>
-
-                <form id="rsvp-form" class="hidden">
-                    <p style="margin-bottom: 25px; color: var(--gold-light);">¡Código aceptado! Será un honor contar con tu presencia.</p>
-                    <div class="input-group">
-                        <input type="text" id="nombre" name="nombre" placeholder="Nombre Completo" required minlength="3">
-                    </div>
-                    <div class="input-group">
-                        <input type="email" id="email" name="email" placeholder="Correo Electrónico" required>
-                    </div>
-                    <div class="input-group">
-                        <select id="asistencia" name="asistencia" required>
-                            <option value="" disabled selected>¿Asistirá?</option>
-                            <option value="Si">Sí, asistiré con gusto</option>
-                            <option value="No">Lamentablemente no podré</option>
-                        </select>
-                    </div>
-                    <div class="acompanantes-flex" style="display: flex; gap: 10px; margin-bottom: 15px;">
-                        <p style="margin-bottom: 25px; color: var(--gold-light);">Acompañantes:</p>
-                        <div class="input-group">
-                            <label style="color: var(--gold-light); font-size: 0.9em;">Adultos</label>
-                            <!-- <input type="number" name="adultos" value="0" min="0" required> -->
-                        <select id="adultos" name="adultos" required>
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                        </select>
-                        </div>
-                        <div class="input-group">
-                            <label style="color: var(--gold-light); font-size: 0.9em;">Niños</label>
-                            <!-- <input type="number" name="niños" value="0" min="0" required> -->
-                        <select id="niños" name="niños" required>
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                        </select>
-
-                        </div>
-                    </div>
-                    
-                    <input type="hidden" id="tipo_registro" name="tipo_registro" value="recepcion">
-
-                    <input type="hidden" id="invitado_de" name="invitado_de" value="">
-
-                    <div class="input-group" style="margin-top: 15px; margin-bottom: 20px;">
-                        <label style="color: var(--gold-light); font-size: 1.6rem; font-family: 'Gabriola', cursive;">Déjanos un mensaje, consejo o deseo para nuestro matrimonio. <br>Nos hace mucha ilusión leerlos... ❤️</label>
-                        <br>
-                        <textarea name="mensaje_amor" rows="3" placeholder="..." style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc; font-family: inherit; resize: vertical;"></textarea>
-                    </div>
-
-                    <button type="submit" class="btn-gold-full">Enviar Respuesta</button>
-                </form>
-
-                <div id="form-message" class="hidden status-message">
-                    <p class="loader"></p>
-                    <span>Enviando confirmación...</span>
-                </div>
-
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p class="pinyon">Te esperamos,</p>
-            <p class="names-footer">H & N</p>
-            <p class="footer-msg">"Así que, como elegidos de Dios, santos y amados, revestíos de entrañas de misericordia, de bondad, humildad, mansedumbre y paciencia, soportándoos unos a otros y perdonándoos mutuamente, si alguno tiene queja contra otro. Como el Señor os perdonó, perdonaos también vosotros. Y por encima de todo esto, revestíos del amor, que es el broche de la perfección.” (Col 3, 12-14)</p>
-            <div class="visitor-counter">
-                <p>Visitas:</p>
-                <!-- <img src="https://hitwebcounter.com/counter/counter.php?page=21490644&style=0030&nbdigits=5&type=page&initCount=0" title="Contador" Alt="Contador" border="0" /> -->
-<!-- hitwebcounter Code START -->
-<a href="https://www.hitwebcounter.com/character-counter" target="_blank" >
-<img src="https://hitwebcounter.com/counter/counter.php?page=21490644&style=0030&nbdigits=5&type=page&initCount=0"title="hitwebcounter.com"alt="hitwebcounter.com"style="border:0;" /></a>                
-            </div>
-        </div>
-    </footer>
-
-    <script src="./config.js"></script>
-    <script src="./scripts/script.js"></script>
-</body>
+	<head>
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-5KDQ3W65');</script>
+		<!-- End Google Tag Manager -->
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+		<title data-i18n="titulonav">Héctor & Nathalie - Nuestra Boda</title>
+		<link rel="stylesheet" href="./styles/styles.css">
+		<!-- Importamos la fuente "Great Vibes" desde Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Pinyon+Script&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<!-- Google Tag Manager (noscript) -->
+		<noscript>
+			<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5KDQ3W65" height="0" width="0" style="display:none;visibility:hidden">
+			</iframe>
+		</noscript>
+		<!-- End Google Tag Manager (noscript) -->
+		<header class="hero">
+			<div class="hero-overlay">
+			</div>
+			<div class="hero-content">
+			<!-- Switcher de Idioma -->
+				<div class="lang-switcher">
+					<button onclick="changeLanguage('es')">ES</button>
+					<button onclick="changeLanguage('en')">EN</button>
+				</div>
+				<div class="rings-icon">
+					<img src="./images/anillos-sf.png" width="155" height="123" alt="Anillos" class="rings-icon">
+				</div>
+				<p class="pre-title" data-i18n="titulo" id="ui-titulo" >Nuestra Boda</p>
+				<br>
+				<h1 class="names" id="ui-nombres"></h1>
+				<br>
+				<div class="container">
+					<p class="msg" data-i18n="mensajeinicio">
+						Nuestro Amor nació de la gracia y lo queremos sellar con la Bendición de Dios. <br> Damos este paso con profunda alegría y sencillez, sabiendo que el regalo más grande es prometernos cuidado y respeto todos los días de nuestras vidas. <br>Con el corazón lleno de humildad, queremos compartir con ustedes el milagro de habernos encontrado. Un amor verdadero no hace ruido, simplemente transforma y llena el alma.
+					</p>
+				</div>
+				<p class="save-the-date" id="ui-fecha" data-i18n="fechaTexto">
+					30 . MAYO . 2026
+				</p>
+				<div id="countdown" class="countdown">
+				</div>
+				<a href="#rsvp" class="btn-gold scroll-link" data-i18n="confirmar">Confirmar Asistencia</a>
+			</div>
+		</header>
+		<!-- Detalle de Detalles -->
+		<section id="detalles" class="locations reveal.active">
+			<div class="monstrance-bg">
+			</div> 
+			<div class="container">
+				<h2 data-i18n="iglesia">
+					Ceremonia Eclesiástica
+				</h2>
+				<div class="cards-container">
+					<div class="card reveal-up" style="animation-delay: 0.2s;">
+						<div class="card-icon">
+							⛪
+						</div>
+						<p class="place" id="ui-ceremonia-lugar" data-i18n="ceremonia.lugar"></p>
+						<p class="time" id="ui-ceremonia-hora" data-i18n="ceremonia.hora">a</p>
+						<p class="address" data-i18n="ceremonia.direccion" id="ui-ceremonia-dir"></p>
+						<p class="place" data-i18n="trajeformal">Traje Formal</p>
+						<a href="#" target="_blank" class="btn-outline" id="ui-ceremonia-mapa">Ver Mapa</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Detalle de Celebración -->
+		<div id="detalles-celebracion" class="hidden">
+			<div id="recepcion" class="hidden">
+				<section id="detalles" class="locations reveal.active" >
+					<div class="monstrance-bg">
+					</div> 
+					<div class="container">
+						<h2 data-i18n="recepcion">
+							Recepción (Brindis)
+						</h2>
+						<div class="cards-container">
+							<div class="card reveal-up" style="animation-delay: 0.2s;">
+								<div class="card-icon">
+									🥂
+								</div>
+								<p class="place" id="ui-recepcion-lugar" data-i18n="recepcion.lugar"></p>
+								<p class="time" id="ui-recepcion-hora" data-i18n="recepcion.hora"></p>
+								<p class="address" data-i18n="recepcion.direccion" id="ui-recepcion-dir"></p>
+								<p class="place" data-i18n="trajeformal">Traje Formal</p>
+								<a href="#" target="_blank" class="btn-outline" id="ui-recepcion-mapa">Ver Mapa</a>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+		<!-- Detalle de Amor -->
+		<section id="detalle-amor" class="rsvp hidden">
+			<div class="container">
+				<h2 data-i18n="detalleamor">Detalle de Amor</h2>
+				<div class="form-wrapper">
+					<p data-i18n="textodetalle" style="font-size: 1.5rem; line-height: 1.6; color: var(--gold-light); font-family: 'Gabriola', cursive;">
+						El regalo más grande es que nos acompañen en este día tan especial. <br>
+						Sin embargo, si desean tener un detalle adicional y ayudarnos a construir nuestro primer hogar juntos, pueden hacerlo a través de los siguientes medios:
+					</p>
+				</div>
+				<div class="cards-container" style="margin-top: 40px; align-items: center;">
+					<div class="time-block" style="text-align: left; padding: 30px; flex: 0 1 350px;">
+						<p style="color: var(--beige); margin-bottom: 0;">
+							<strong style="color: var(--gold); font-family: 'Cinzel', serif; font-size: 1.2rem; letter-spacing: 1px;">
+								Pago Móvil:</strong>
+							<br>
+							Bancamiga - 0414-277.73.78<br>
+							<span style="font-size: 0.9rem; opacity: 0.8;">Cédula de Identidad: 13.886.223
+							</span><br>
+							<strong style="color: var(--gold); font-family: 'Cinzel', serif; font-size: 1rem; letter-spacing: 1px;">
+								Transferencia:
+							</strong><br>
+								Cta. Corriente: <br>0172-0105-1510-5528-9662
+						</p>
+						<hr style="border-color: rgba(197, 160, 89, 0.3); margin: 15px 0;">
+						<p style="margin-bottom: 15px; color: var(--beige);">
+							<strong style="color: var(--gold); font-family: 'Cinzel', serif; font-size: 1.2rem; letter-spacing: 1px;">Binance:</strong><br>
+							Binance ID: 164388197<br>
+							<span style="font-size: 0.9rem; opacity: 0.8;">hectorr@gmail.com</span>
+						</p>
+						<hr style="border-color: rgba(197, 160, 89, 0.3); margin: 15px 0;">
+						<p style="margin-bottom: 15px; color: var(--beige);">
+							<strong style="color: var(--gold); font-family: 'Cinzel', serif; font-size: 1.2rem; letter-spacing: 1px;">PipolPay:</strong><br>
+							hectorr78@gmail.com<br>
+							<span style="font-size: 0.9rem; opacity: 0.8;">Héctor J. Rodríguez P.</span>
+						</p>
+						<hr style="border-color: rgba(197, 160, 89, 0.3); margin: 15px 0;">
+						<p style="margin-bottom: 15px; color: var(--beige);">
+							<strong style="color: var(--gold); font-family: 'Cinzel', serif; font-size: 1.2rem; letter-spacing: 1px;">FaceBank:</strong><br>
+							Beneficiary: HECTOR JOSE RODRIGUEZ PULIDO<br>Account number: 21580029133<br>Routing Number (ABA): 021502189<br>SWIFT: FILCPR22<br>Name of bank: FACEBANK International<br>Bank address: 17 Road 2, Suite 600, Guaynabo, Puerto Rico 00968-1787
+						</p>
+						<hr style="border-color: rgba(197, 160, 89, 0.3); margin: 15px 0;">
+						<p style="margin-bottom: 15px; color: var(--beige);">
+							<strong style="color: var(--gold); font-family: 'Cinzel', serif; font-size: 1.2rem; letter-spacing: 1px;">PayPal:</strong><br>
+							hectorr78@hotmail.com<br>
+							<span style="font-size: 0.9rem; opacity: 0.8;">Héctor J. Rodríguez P.</span>
+						</p>
+						<hr style="border-color: rgba(197, 160, 89, 0.3); margin: 15px 0;">
+						<p style="margin-bottom: 15px; color: var(--beige);">
+							<strong style="color: var(--gold); font-family: 'Cinzel', serif; font-size: 1.2rem; letter-spacing: 1px;">Zinli:</strong><br>
+							hectorr@gmail.com<br>
+							<span style="font-size: 0.9rem; opacity: 0.8;">Héctor J. Rodríguez P.</span>
+						</p>
+					</div>
+					<div class="card" style="padding: 25px; flex: 0 1 280px; animation: none; opacity: 1; transform: none;">
+						<img src="./images/QR-bancamiga.png" alt="QR de Pago" style="width: 260px; height: 340px; display: block; margin: 0 auto 15px;">
+						<h3 style="font-size: 1rem; margin-bottom: 0; color: var(--navy);">Escanea para transferir</h3>
+						<br>
+						<img src="./images/qr-zinli.png" alt="QR de Pago" style="width: 180px; height: 180px; display: block; margin: 0 auto 15px;">
+						<h3 style="font-size: 1rem; margin-bottom: 0; color: var(--navy);">Escanea para transferir</h3>
+					</div>
+				</div>
+				<p data-i18n="findetalle" style="margin-top: 50px; font-size: 1.5rem; font-style: italic; color: var(--gold-light); text-align: center; font-family: 'Gabriola', cursive;">
+					*Si realizas un aporte, por favor envíanos el comprobante vía WhatsApp. ¡Gracias por tu generosidad!*
+				</p>
+			</div>
+		</section>
+		<!-- Sección de Confirmación -->
+		<section id="rsvp" class="rsvp reveal.active">
+			<div class="container">
+				<h2 data-i18n="confirmartitulo">
+					Confirmación
+				</h2>
+				<div class="form-wrapper">
+					<div id="codigo-section">
+						<p data-i18n="confirmatexto">
+							Ingresa el código secreto de tu invitación digital para acceder a la confirmación.
+						</p>
+						<div class="input-group" style="max-width: 300px; margin: 0 auto;">
+							<input type="text" id="codigo-acceso" placeholder="Ej: QUIENSEJO" required autocomplete="off">
+						</div>
+						<button id="btn-verificar" class="btn-gold" style="margin-top:15px;">
+							Validar Código
+						</button>
+						<p data-i18n="confirmarerror" id="error-codigo" class="hidden" style="color:#ffb3b3; margin-top:15px; font-weight:bold;">
+							Código incorrecto. Por favor, verifica tu invitación.
+						</p>
+					</div>
+					<form id="rsvp-form" class="hidden">
+						<p data-i18n="confircodeaceptada" style="margin-bottom: 25px; color: var(--gold-light);">
+							¡Código aceptado! Será un honor contar con tu presencia.
+						</p>
+						<div class="input-group">
+							<input type="text" id="nombre" name="nombre" placeholder="Nombre Completo" required minlength="3">
+						</div>
+						<div class="input-group">
+							<input type="email" id="email" name="email" placeholder="Correo Electrónico" required>
+						</div>
+						<div class="input-group">
+							<select id="asistencia" name="asistencia" required>
+								<option data-i18n="optasistencia1" value="" disabled selected>¿Asistirá?</option>
+								<option data-i18n="optasistencia2" value="Si">Sí, asistiré con gusto</option>
+								<option data-i18n="optasistencia3" value="No">Lamentablemente no podré</option>
+							</select>
+						</div>
+						<div class="acompanantes-flex" style="display: flex; gap: 10px; margin-bottom: 15px;">
+							<p data-i18n="textacompanantes" style="margin-bottom: 25px; color: var(--gold-light);">
+								Acompañantes:
+							</p>
+							<div class="input-group">
+								<label data-i18n="textadulto" style="color: var(--gold-light); font-size: 0.9em;">
+									Adultos
+								</label>
+								<!-- <input type="number" name="adultos" value="0" min="0" required> -->
+								<select id="adultos" name="adultos" required>
+									<option value="0">0</option>
+									<option value="1">1</option>
+								</select>
+							</div>
+							<div class="input-group">
+								<label data-i18n="textninos" style="color: var(--gold-light); font-size: 0.9em;">
+									Niños
+								</label>
+								<!-- <input type="number" name="niños" value="0" min="0" required> -->
+								<select id="niños" name="niños" required>
+									<option value="0">0</option>
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+								</select>
+							</div>
+						</div>
+						<input type="hidden" id="tipo_registro" name="tipo_registro" value="recepcion">
+						<input type="hidden" id="invitado_de" name="invitado_de" value="">
+						<div class="input-group" style="margin-top: 15px; margin-bottom: 20px;">
+							<label data-i18n="mensajepersonal" style="color: var(--gold-light); font-size: 1.6rem; font-family: 'Gabriola', cursive;">
+								Déjanos un mensaje, consejo o deseo para nuestro matrimonio. <br>Nos hace mucha ilusión leerlos... ❤️
+							</label><br>
+							<textarea name="mensaje_amor" rows="3" placeholder="..." style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc; font-family: inherit; resize: vertical;">
+							</textarea>
+						</div>
+						<button data-i18n="textbotonenviar" type="submit" class="btn-gold-full">
+							Enviar Confirmación
+						</button>
+					</form>
+					<div id="form-message" class="hidden status-message">
+						<p class="loader"></p>
+						<span data-i18n="mensajeenviando">Enviando confirmación...</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer>
+			<div class="container">
+				<p data-i18n="footer" class="pinyon">Te esperamos,</p>
+				<p class="names-footer">H & N</p>
+				<p data-i18n="msgfooter" class="footer-msg">"Así que, como elegidos de Dios, santos y amados, revestíos de entrañas de misericordia, de bondad, humildad, mansedumbre y paciencia, soportándoos unos a otros y perdonándoos mutuamente, si alguno tiene queja contra otro. Como el Señor os perdonó, perdonaos también vosotros. Y por encima de todo esto, revestíos del amor, que es el broche de la perfección.” (Col 3, 12-14)</p>
+				<div class="visitor-counter">
+					<p data-i18n="titvisitas">Visitas:</p>
+					<!-- <img src="https://hitwebcounter.com/counter/counter.php?page=21490644&style=0030&nbdigits=5&type=page&initCount=0" title="Contador" Alt="Contador" border="0" /> -->
+					<!-- hitwebcounter Code START -->
+					<a href="https://www.hitwebcounter.com/character-counter" target="_blank" >
+					<img src="https://hitwebcounter.com/counter/counter.php?page=21490644&style=0030&nbdigits=5&type=page&initCount=0"title="hitwebcounter.com"alt="hitwebcounter.com"style="border:0;" /></a>                
+				</div>
+			</div>
+		</footer>
+		<script src="./config.js"></script>
+		<script src="./scripts/script.js"></script>
+	</body>
 </html>

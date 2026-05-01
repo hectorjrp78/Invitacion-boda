@@ -3,19 +3,44 @@
 // ==========================================
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('ui-nombres').innerText = CONFIG.nombres;
-    document.getElementById('ui-fecha').innerText = CONFIG.fechaTexto;
+    document.getElementById('ui-fecha').innerText = CONFIG[currentlang].fechaTexto;
+    document.getElementById('ui-titulo').innerText = CONFIG[currentlang].titulo;
+    // document.getElementById('ui-iglesia').innerText = CONFIG[currentlang].iglesia;
+    // document.getElementById('ui-recepcion').innerText = CONFIG[currentlang].recepcion;
+    // document.getElementById('ui-detalle-amor').innerText = CONFIG[currentlang].detalleAmor;
+    // document.getElementById('ui-confirmar').innerText = CONFIG[currentlang].confirmar;
     
-    document.getElementById('ui-ceremonia-hora').innerText = CONFIG.ceremonia.hora;
-    document.getElementById('ui-ceremonia-lugar').innerText = CONFIG.ceremonia.lugar;
-    document.getElementById('ui-ceremonia-dir').innerText = CONFIG.ceremonia.direccion;
-    document.getElementById('ui-ceremonia-mapa').href = CONFIG.ceremonia.mapa_url;
+    document.getElementById('ui-ceremonia-hora').innerText = CONFIG[currentlang].ceremonia.hora;
+    document.getElementById('ui-ceremonia-lugar').innerText = CONFIG[currentlang].ceremonia.lugar;
+    document.getElementById('ui-ceremonia-dir').innerText = CONFIG[currentlang].ceremonia.direccion;
+    document.getElementById('ui-ceremonia-mapa').href = CONFIG[currentlang].ceremonia.mapa_url;
 
-    document.getElementById('ui-recepcion-hora').innerText = CONFIG.recepcion.hora;
-    document.getElementById('ui-recepcion-lugar').innerText = CONFIG.recepcion.lugar;
-    document.getElementById('ui-recepcion-dir').innerText = CONFIG.recepcion.direccion;
-    document.getElementById('ui-recepcion-mapa').href = CONFIG.recepcion.mapa_url;
+    document.getElementById('ui-recepcion-hora').innerText = CONFIG[currentlang].recepcion.hora;
+    document.getElementById('ui-recepcion-lugar').innerText = CONFIG[currentlang].recepcion.lugar;
+    document.getElementById('ui-recepcion-dir').innerText = CONFIG[currentlang].recepcion.direccion;
+    document.getElementById('ui-recepcion-mapa').href = CONFIG[currentlang].recepcion.mapa_url;
 });
+function changeLanguage(lang) {
+    currentlang = lang;
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
 
+        // Navegar por objetos anidados (ej: ceremonia.direccion)
+        // Esto divide "ceremonia.direccion" en ["ceremonia", "direccion"] y busca nivel por nivel
+        const text = key.split('.').reduce((obj, i) => obj ? obj[i] : null, CONFIG[lang]);
+        //  console.log(`Texto traducido: ${CONFIG[lang][key]} para idioma: ${lang} y clave: ${key}`);
+        //el.innerHTML = CONFIG[lang][key];
+        if (text) {
+            // Usar innerHTML en lugar de innerText para que los <br> hagan el salto de línea
+            el.innerHTML = text;
+        }
+    });
+    // Opcional: Cambiar placeholder de inputs (le agregué una validación por si el input no existe en esa vista)
+    const inputNombre = document.getElementById('nombre');
+    if (inputNombre) {
+        inputNombre.placeholder = (lang === 'es') ? 'Nombre' : 'Full Name';
+    }
+}
 // ==========================================
 // 2. CONTADOR DINÁMICO
 // ==========================================
@@ -23,7 +48,7 @@ const countdownElement = document.getElementById('countdown');
 function updateCountdown() {
     const distance = CONFIG.fechaContador - new Date().getTime();
     if (distance < 0) {
-        countdownElement.innerHTML = "<p class='time-number'>¡Hoy es el gran día!</p>";
+        countdownElement.innerHTML = "<p class='time-number' data-i18n='hoyeselgrandedia'>¡Hoy es el gran día!</p>";
         return;
     }
     const days = Math.floor(distance / (1000 * 60 * 60 * 24));
@@ -32,8 +57,8 @@ function updateCountdown() {
     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
     countdownElement.innerHTML = `
-        <div class="time-block"><p class="time-number">${days}</p><p class="time-label">Días</p></div>
-        <div class="time-block"><p class="time-number">${hours}</p><p class="time-label">Hrs</p></div>
+        <div class="time-block"><p class="time-number">${days}</p><p class="time-label" data-i18n="diacont">Días</p></div>
+        <div class="time-block"><p class="time-number">${hours}</p><p class="time-label" >Hrs</p></div>
         <div class="time-block"><p class="time-number">${minutes}</p><p class="time-label">Min</p></div>
         <div class="time-block"><p class="time-number">${seconds}</p><p class="time-label">Seg</p></div>
     `;
